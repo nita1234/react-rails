@@ -33,16 +33,23 @@ var Login = React.createClass({
   render:function(){
     var errorClass = this.state.loginUnsuccessful ? "" : "hidden"
     return (
-      <div>
-        <h1 id="login_page">Login Form</h1>
+      <center>
         <div id="login">
-          <input type="email" id="email" placeholder="Email" ref={(email)=> this.email = email} autocomplete="off"/>
-          <input type="password" id="password" placeholder="Password" ref={(passowrd)=> this.password = password} autocomplete="off"/>
-          <button id="send" onClick={this.handleLogin}>Login</button>
+          <h1 id="login_page">Login</h1>
+          <div className="form-group emailInput has-feedback">
+            <label for="email">Email</label>
+            <input type="email" className="form-control" id="email" placeholder="Email" ref={(email)=> this.email = email} autocomplete="off"/>
+          </div> 
+          <div className="form-group passewordInput has-feedback">
+            <label for="password">Password</label>
+            <input type="password" id="password" className="form-control" placeholder="Password" ref={(passowrd)=> this.password = password} autocomplete="off"/>
+          </div> 
+            <button id="send" onClick={this.handleLogin}>Login</button>
+          <p className={errorClass}>There was an error with your login details</p>
+          <p className="loginbottomtext">Still don't have an account? <a onClick={() => this.props.changePage("signup")} className="Sign_up">Register</a></p>
+          <p className="text-muted loginbottomtext">©Bestpeers</p> 
         </div>
-        <p className={errorClass}>There was an error with your login details</p>
-        <button onClick={() => this.props.changePage("signup")} className="Sign_up">Sign Up</button>
-      </div>
+      </center>
     )
   }
 });
