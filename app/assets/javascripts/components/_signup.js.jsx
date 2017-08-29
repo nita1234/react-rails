@@ -32,20 +32,29 @@ var Signup = React.createClass({
     });
   },
   render:function(){
-  var errorClass = this.state.signupUnsuccessful ? "" : "hidden"
-  return (
-    <div>
-    <h1 id="login_page">Sign Up Form</h1>
-      <div id="signup">
-        <input type="email" id="email" placeholder="Email" ref={(email)=> this.email = email} autocomplete="off"/>
-        <input type="password" id="password" placeholder="Password" ref={(password) => this.password=password} autocomplete="off"/>
-        <input type="password" id="confirm" placeholder="Confirm Password" ref={(password_confirmation)=>this.password_confirmation = password_confirmation} autocomplete="off"/>
-        <button id="send" onClick={this.handleClick} >Sign Up</button>
-      </div>
-      <p className={errorClass}>There was an error with your signup details</p>
-      <button onClick={() => this.props.changePage("login")} className="Sign_in">Login</button>
-    </div>
-    
+    var errorClass = this.state.signupUnsuccessful ? "" : "hidden"
+    return (
+      <center>
+        <div id="login">
+          <h1 id="login_page">Sign Up</h1>
+          <div className="form-group emailInput has-feedback">
+            <label for="email">Email</label>
+            <input type="email" id="email" className="form-control" placeholder="Email" ref={(email)=> this.email = email} autocomplete="off"/>
+          </div>
+          <div className="form-group passewordInput has-feedback">
+            <label for="password">Password</label>
+            <input type="password" id="password" className="form-control" placeholder="Password" ref={(password) => this.password=password} autocomplete="off"/>
+          </div> 
+          <div className="form-group passewordInput has-feedback">
+            <label for="password">Confirm Password</label>
+            <input type="password" id="confirm" placeholder="Confirm Password" className="form-control" ref={(password_confirmation)=>this.password_confirmation = password_confirmation} autocomplete="off"/>
+          </div> 
+          <button id="send" onClick={this.handleClick} >Sign Up</button>
+          <p className={errorClass}>There was an error with your signup details</p>
+          <p className="loginbottomtext">Already have an account? <a onClick={() => this.props.changePage("login")} className="Sign_up">Login</a></p>
+          <p className="text-muted loginbottomtext">©Bestpeers</p> 
+        </div>
+      </center>
     )
   }
 })
