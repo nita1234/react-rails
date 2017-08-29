@@ -22,7 +22,7 @@ var Footer = React.createClass({
     <div>
       <div style={phantom} />
         <div style={style}>
-          <span style={{color:'orangered',fontWeight:'bold',fontSize: '21px'}}>@2017</span>
+          <span style={{color:'Black',fontWeight:'bold',fontSize: '21px'}}>@2017 Bestpeers Infosystem </span>
         </div>
       </div> 
     ) 

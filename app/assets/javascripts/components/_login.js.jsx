@@ -47,7 +47,7 @@ var Login = React.createClass({
             <button id="send" onClick={this.handleLogin}>Login</button>
           <p className={errorClass}>There was an error with your login details</p>
           <p className="loginbottomtext">Still don't have an account? <a onClick={() => this.props.changePage("signup")} className="Sign_up">Register</a></p>
-          <p className="text-muted loginbottomtext">©Bestpeers</p> 
+          <p className="text-muted loginbottomtext">@Bestpeers</p> 
         </div>
       </center>
     )

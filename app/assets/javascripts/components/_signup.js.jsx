@@ -52,7 +52,7 @@ var Signup = React.createClass({
           <button id="send" onClick={this.handleClick} >Sign Up</button>
           <p className={errorClass}>There was an error with your signup details</p>
           <p className="loginbottomtext">Already have an account? <a onClick={() => this.props.changePage("login")} className="Sign_up">Login</a></p>
-          <p className="text-muted loginbottomtext">©Bestpeers</p> 
+          <p className="text-muted loginbottomtext">@Bestpeers</p> 
         </div>
       </center>
     )
