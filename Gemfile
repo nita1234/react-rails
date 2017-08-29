@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'react-rails'
 gem 'responders'
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap', '~> 4.0.0.beta'
 gem 'devise'
 gem 'simple_token_authentication', '~> 1.0'
 # Use ActiveModel has_secure_password
